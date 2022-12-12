@@ -9,7 +9,7 @@ public class money_converter {
     public static double pesoColumbian;
     public static double rupeeIndian;
     public static double yen;
-    public static double yuan;
+    public static double yuanChinese;
 
     public void depositMoney(double depositAmount){
         balance += depositAmount;
@@ -33,33 +33,33 @@ public class money_converter {
     }
 
     public void convertToPound(){
-        euro = balance * 0.949256;
-        System.out.println("You current balance in euro's is: " + euro);
+        poundEnglish = balance * 0.816714;
+        System.out.println("You current balance in british pound's is: " + poundEnglish);
     }
 
     public void convertToMexicanPeso(){
-        euro = balance * 0.949256;
-        System.out.println("You current balance in euro's is: " + euro);
+        pesoMexican = balance * 19.782146;
+        System.out.println("You current balance in mexican peso's is: " + pesoMexican);
     }
 
     public void convertToColumbianPeso(){
-        euro = balance * 0.949256;
-        System.out.println("You current balance in euro's is: " + euro);
+        pesoColumbian = balance * 4809.664105;
+        System.out.println("You current balance in columbian peso's is: " + pesoColumbian);
     }
 
     public void convertToIndianRupee(){
-        euro = balance * 0.949256;
-        System.out.println("You current balance in euro's is: " + euro);
+        rupeeIndian = balance * 82.446878;
+        System.out.println("You current balance in indian rupee's is: " + rupeeIndian);
     }
 
     public void convertToYen(){
-        euro = balance * 0.949256;
-        System.out.println("You current balance in euro's is: " + euro);
+        yen = balance * 136.782862;
+        System.out.println("You current balance in yen is: " + yen);
     }
 
     public void convertToChineseYuan(){
-        euro = balance * 0.949256;
-        System.out.println("You current balance in euro's is: " + euro);
+        yuanChinese = balance * 6.957579;
+        System.out.println("You current balance in chinese yuan is: " + yuanChinese);
     }
 
 }

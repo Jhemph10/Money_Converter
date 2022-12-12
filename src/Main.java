@@ -12,22 +12,29 @@ public class Main {
         username = scanner.nextLine();
         System.out.println("please enter your password now");
         password = scanner.nextLine();
-        System.out.println("Now lets have you Login in now, please enter your username");
+        System.out.println("Now lets have you Login In, please enter your username");
         String userName = scanner.nextLine();
-        while (userName != password) {
-            System.out.println("that password is incorrect, please try again");
+        while (!username.equals(userName)) {
+            System.out.println("that username is incorrect, please try again");
             userName = scanner.nextLine();
         }
         System.out.println("now enter your password");
         String passWord = scanner.nextLine();
-        while (userName != password) {
+        while (!password.equals(passWord)) {
             System.out.println("that password is incorrect, please try again");
-            userName = scanner.nextLine();
+            passWord = scanner.nextLine();
         }
         System.out.println("trying to login....");
-        System.out.println("Succesful Login");
+        System.out.println("Successful Login");
         System.out.println("~~~~~~ Welcome to Currency Converter ~~~~~~~");
         System.out.println("please select from one of the options");
+        System.out.println("                                     ");
+        System.out.println("[1] check current balance");
+        System.out.println("[2] deposit money");
+        System.out.println("[3] withdrawal money");
+        System.out.println("[4] convert currency");
+        System.out.println("[5] exit program");
+
         boolean exitRequested = false;
         while (!exitRequested) {
             int choice = Integer.parseInt(scanner.next());
