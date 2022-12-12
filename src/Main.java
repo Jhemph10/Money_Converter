@@ -40,10 +40,55 @@ public class Main {
             int choice = Integer.parseInt(scanner.next());
             switch (choice) {
                 case 1:
+                    boolean exit = false;
+                    while (!exit) {
+                        System.out.println("what balance would you like check?");
+                        System.out.println("[1] USD");
+                        System.out.println("[2] Euro");
+                        System.out.println("[3] English Pound");
+                        System.out.println("[4] Mexican Peso");
+                        System.out.println("[5] Columbian Peso");
+                        System.out.println("[6] Indian Rupee");
+                        System.out.println("[7] Yen");
+                        System.out.println("[8] Chinese Yuan");
+                        System.out.println("[9] Back to Main Menu");
+                        int nextChoice = Integer.parseInt(scanner.next());
+                        switch (nextChoice) {
+                            case 1:
+                                System.out.println(" you have :" + money_converter.balance);
+                                break;
+                            case 2:
+                                System.out.println(" you have :" + money_converter.euro);
+                                break;
+                            case 3:
+                                System.out.println(" you have :" + money_converter.poundEnglish);
+                                break;
+                            case 4:
+                                System.out.println(" you have :" + money_converter.pesoMexican);
+                                break;
+                            case 5:
+                                System.out.println(" you have :" + money_converter.pesoColumbian);
+                                break;
+                            case 6:
+                                System.out.println(" you have :" + money_converter.rupeeIndian);
+                                break;
+                            case 7:
+                                System.out.println(" you have :" + money_converter.yen);
+                                break;
+                            case 8:
+                                System.out.println(" you have :" + money_converter.yuanChinese);
+                                break;
+                            case 9:
+                                exitRequested = true;
+                                break;
+                            default:
+                                System.out.println("Wrong input");
+                                break;
+                        }
+                    }
 
                     break;
                 case 2:
-                    System.out.println("Please enter deposit amount:");
 
                     break;
                 case 3:

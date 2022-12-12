@@ -1,15 +1,95 @@
 public class money_converter {
 
     public static double balance = 0.0;
-    public static double depositAmount;
-    public static double withdrawalAmount;
-    public static double euro;
-    public static double poundEnglish;
-    public static double pesoMexican;
-    public static double pesoColumbian;
-    public static double rupeeIndian;
-    public static double yen;
-    public static double yuanChinese;
+    public static double depositAmount = 0.0;
+    public static double withdrawalAmount = 0.0;
+    public static double euro = 0.0;
+    public static double poundEnglish = 0.0;
+    public static double pesoMexican = 0.0;
+    public static double pesoColumbian = 0.0;
+    public static double rupeeIndian = 0.0;
+    public static double yen = 0.0;
+    public static double yuanChinese = 0.0;
+
+    public static double getBalance() {
+        return balance;
+    }
+
+    public static void setBalance(double balance) {
+        money_converter.balance = balance;
+    }
+
+    public static double getDepositAmount() {
+        return depositAmount;
+    }
+
+    public static void setDepositAmount(double depositAmount) {
+        money_converter.depositAmount = depositAmount;
+    }
+
+    public static double getWithdrawalAmount() {
+        return withdrawalAmount;
+    }
+
+    public static void setWithdrawalAmount(double withdrawalAmount) {
+        money_converter.withdrawalAmount = withdrawalAmount;
+    }
+
+    public static double getEuro() {
+        return euro;
+    }
+
+    public static void setEuro(double euro) {
+        money_converter.euro = euro;
+    }
+
+    public static double getPoundEnglish() {
+        return poundEnglish;
+    }
+
+    public static void setPoundEnglish(double poundEnglish) {
+        money_converter.poundEnglish = poundEnglish;
+    }
+
+    public static double getPesoMexican() {
+        return pesoMexican;
+    }
+
+    public static void setPesoMexican(double pesoMexican) {
+        money_converter.pesoMexican = pesoMexican;
+    }
+
+    public static double getPesoColumbian() {
+        return pesoColumbian;
+    }
+
+    public static void setPesoColumbian(double pesoColumbian) {
+        money_converter.pesoColumbian = pesoColumbian;
+    }
+
+    public static double getRupeeIndian() {
+        return rupeeIndian;
+    }
+
+    public static void setRupeeIndian(double rupeeIndian) {
+        money_converter.rupeeIndian = rupeeIndian;
+    }
+
+    public static double getYen() {
+        return yen;
+    }
+
+    public static void setYen(double yen) {
+        money_converter.yen = yen;
+    }
+
+    public static double getYuanChinese() {
+        return yuanChinese;
+    }
+
+    public static void setYuanChinese(double yuanChinese) {
+        money_converter.yuanChinese = yuanChinese;
+    }
 
     public void depositMoney(double depositAmount){
         balance += depositAmount;
