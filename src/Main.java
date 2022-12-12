@@ -3,7 +3,6 @@ public class Main {
     public static String username;
     public static String password;
 
-
     public static void main(String[] args) {
         System.out.println("Welcome to the Josiah's Online Currency Converter!");
         System.out.println("lets first start by making a user name and password");
@@ -24,19 +23,19 @@ public class Main {
             System.out.println("that password is incorrect, please try again");
             passWord = scanner.nextLine();
         }
-        System.out.println("trying to login....");
-        System.out.println("Successful Login");
-        System.out.println("~~~~~~ Welcome to Currency Converter ~~~~~~~");
-        System.out.println("please select from one of the options");
-        System.out.println("                                     ");
-        System.out.println("[1] check current balance");
-        System.out.println("[2] deposit money");
-        System.out.println("[3] withdrawal money");
-        System.out.println("[4] convert currency");
-        System.out.println("[5] exit program");
 
         boolean exitRequested = false;
         while (!exitRequested) {
+            System.out.println("trying to login....");
+            System.out.println("Successful Login");
+            System.out.println("~~~~~~ Welcome to Currency Converter ~~~~~~~");
+            System.out.println("please select from one of the options");
+            System.out.println("                                     ");
+            System.out.println("[1] check current balance");
+            System.out.println("[2] deposit money");
+            System.out.println("[3] withdrawal money");
+            System.out.println("[4] convert currency");
+            System.out.println("[5] exit program");
             int choice = Integer.parseInt(scanner.next());
             switch (choice) {
                 case 1:
@@ -79,7 +78,7 @@ public class Main {
                                 System.out.println(" you have :" + money_converter.yuanChinese);
                                 break;
                             case 9:
-                                exitRequested = true;
+                                exit = true;
                                 break;
                             default:
                                 System.out.println("Wrong input");
@@ -89,14 +88,55 @@ public class Main {
 
                     break;
                 case 2:
-
+                    money_converter.depositMoneyInBank();
                     break;
                 case 3:
-                    System.out.println("Please enter withdrawal amount:");
-
+                    money_converter.withdrawalMoneyFromBank();
                     break;
                 case 4:
-                    System.out.println("Please enter the phone number of the account you want to transfer to: ");
+
+                    boolean otherExit = false;
+                    while (!otherExit) {
+                        System.out.println("what Currency will you be converting your money to?");
+                        System.out.println("[1] Euro");
+                        System.out.println("[2] English Pound");
+                        System.out.println("[3] Mexican Peso");
+                        System.out.println("[4] Columbian Peso");
+                        System.out.println("[5] Indian Rupee");
+                        System.out.println("[6] Yen");
+                        System.out.println("[7] Chinese Yuan");
+                        System.out.println("[8] Back to Main Menu");
+                        int otherChoice = Integer.parseInt(scanner.next());
+                        switch (otherChoice) {
+                            case 1:
+                                money_converter.convertToEuro();
+                                break;
+                            case 2:
+                                money_converter.convertToPound();
+                                break;
+                            case 3:
+                                money_converter.convertToMexicanPeso();
+                                break;
+                            case 4:
+                                money_converter.convertToColumbianPeso();
+                                break;
+                            case 5:
+                                money_converter.convertToIndianRupee();
+                                break;
+                            case 6:
+                                money_converter.convertToYen();
+                                break;
+                            case 7:
+                                money_converter.convertToChineseYuan();
+                                break;
+                            case 8:
+                                otherExit = true;
+                                break;
+                            default:
+                                System.out.println("Wrong input");
+                                break;
+                        }
+                    }
 
                     break;
 
